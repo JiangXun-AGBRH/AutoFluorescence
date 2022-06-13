@@ -381,7 +381,7 @@ for t in range(epoch): # It is recommented to save the parameters each 50~200 cy
         # training with Strategy II
         number = random.randint(1,100)
         # training with Strategy I
-        if number%105 == 0:
+        if number%1 == 0: # control the ratio between Generator I and II training
             y = net(image) 
             loss = loss_fn(y, label)
             optimizer.zero_grad()
@@ -390,7 +390,7 @@ for t in range(epoch): # It is recommented to save the parameters each 50~200 cy
         
         number = random.randint(1,100)
         # training with Strategy I
-        if number%1 == 0:
+        if number%1 == 0: # control the ratio between Generator I and II training
             n = random.randint(0,5)
             L = [0,0,0,90,180,270]
             td, gfp, af = readInput(sg)
