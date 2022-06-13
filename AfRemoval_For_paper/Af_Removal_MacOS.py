@@ -11,7 +11,7 @@ import matplotlib.pyplot as plt
 from mpl_toolkits.axes_grid1 import make_axes_locatable # tools to make zoomin or zoomout possible in the heatmap
 import matplotlib
 import os
-os.environ['KMP_DUPLICATE_LIB_OK']='True'
+os.environ['KMP_DUPLICATE_LIB_OK']='True' # According to our test, this line is needed for MacOS!
 
 dtype = torch.float32
 if torch.cuda.is_available():
